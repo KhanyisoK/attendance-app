@@ -23,6 +23,7 @@ class AttendenceImport implements ToModel, WithHeadingRow
             'status' => $row['status'],
             'name_surname' => $row['name'],
             'instrument' => $row['instrument'],
+            'color' => $row['color'],
         ]);
     }
 }

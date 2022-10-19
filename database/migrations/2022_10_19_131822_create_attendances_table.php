@@ -20,6 +20,7 @@ class CreateAttendancesTable extends Migration
             $table->string('name_surname')->nullable();
             $table->string('instrument')->nullable();
             $table->string('is_attend')->nullable();
+            $table->string('color')->nullable();
             $table->timestamps();
         });
     }

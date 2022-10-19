@@ -38,6 +38,7 @@ class AttendanceController extends Controller
         // Search in the title and body columns from the posts table
         $attendees = Attendance::query()
         ->where('name_surname', 'LIKE', "%{$search}%")
+        ->orderBy('created_at', 'DESC')
         ->paginate(10);
         $list = Attendance::all();
         $attendeesCount = count(Attendance::where('is_attend', 'Yes')->get());
@@ -211,7 +212,7 @@ class AttendanceController extends Controller
             return redirect()
                 ->back()
                 ->withInput()
-                ->with('error', 'An error occured, please contact your IT Admin .');
+                ->with('error', $e);
         }
     }
 

@@ -9,6 +9,6 @@ class Attendance extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['band', 'status','name_surname', 'instrument', 'is_attend'];
+    protected $fillable = ['band', 'status','name_surname', 'instrument', 'is_attend', 'color'];
 
 }

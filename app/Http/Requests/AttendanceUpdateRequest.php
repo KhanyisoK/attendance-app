@@ -28,6 +28,7 @@ class AttendanceUpdateRequest extends FormRequest
             'status' => 'required|string',
             'name_surname' => 'required|string',
             'instrument' => 'required|string',
+            'color' => 'required|string',
         ];
     }
 }
